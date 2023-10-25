@@ -108,13 +108,13 @@ pub fn parse_script_with_post_process(
   })
 }
 
-enum ParseMode {
+pub enum ParseMode {
   Program,
   Module,
   Script,
 }
 
-fn parse(
+pub fn parse(
   params: ParseParams,
   parse_mode: ParseMode,
   post_process: impl FnOnce(Program) -> Program,
